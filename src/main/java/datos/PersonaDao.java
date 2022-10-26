@@ -21,15 +21,13 @@ public class PersonaDao {
     private static final String SQL_SELECT = "SELECT * FROM persona";
     private static final String SQL_INSERT = "INSERT INTO persona (nombre, "
             + "apellidos, email, telefono) VALUES (?, ?, ?, ?)";
-    
     private static final String SQL_UPDATE = "UPDATE persona SET "
             + "nombre = ? "
             + "apellidos = ?"
             + "email = ?"
             + "telefono = ?"
             + "WHERE idPersona = ?";
-    
-    
+    private static final String SQL_DELETE = "DELETE FROM persona WHERE idPersona = ?";
     
     // Método que nos lista todas las personas de nuestro sistema
     public List<Persona> seleccionar() throws SQLException {
@@ -127,10 +125,8 @@ public class PersonaDao {
                 close(conn);
             } catch (SQLException ex) {
                 ex.printStackTrace(System.out);
-            }
-            
+            }   
         }
-        
         return registro;
     }
     

@@ -4,13 +4,14 @@
  */
 package dominio;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author Alumno Mañana
  */
-public class Usuario {
+public class Usuario implements Serializable{
     public int idUsuario;
     public String usuario;
     public String contrasenya;
