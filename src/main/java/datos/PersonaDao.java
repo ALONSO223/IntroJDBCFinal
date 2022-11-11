@@ -57,7 +57,7 @@ public class PersonaDao {
         close(rs);
         close(stmt);
         close(conn);
-        
+         
         return personas;
     }
     
